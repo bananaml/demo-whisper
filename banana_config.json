@@ -1,0 +1,11 @@
+{
+    "example_input": {
+        "path": "hello_world.wav"
+    },
+    "example_output": {
+        "outputs": {
+            "text": " Software developers often start with a Hello World script."
+        }
+    },
+    "version": "1"
+}

@@ -1,0 +1,5 @@
+potassium
+transformers
+soundfile
+librosa
+boto3
