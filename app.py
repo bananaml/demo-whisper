@@ -13,7 +13,7 @@ app = Potassium("my_app")
 # @app.init runs at startup, and loads models into the app's context
 @app.init
 def init():
-    
+
     config = WhisperConfig.from_pretrained("openai/whisper-base")
     processor = AutoProcessor.from_pretrained("openai/whisper-base")
     
