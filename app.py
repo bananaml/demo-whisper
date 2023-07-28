@@ -47,7 +47,7 @@ def init():
 # @app.handler runs for every call
 @app.handler()
 def handler(context: dict, request: Request) -> Response:
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = get_device()
 
     # get file path from request.json dict
     path = request.json.get("path")
@@ -81,6 +81,21 @@ def load_audio(audio_path):
     
     return speech.squeeze()
 
+def get_device():
+    
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+        print("Running on CUDA")
+    
+    elif torch.backends.mps.is_available():
+        device = torch.device("mps")
+        print("Running on MPS")
+    
+    else:
+        device = torch.device("cpu")
+        print("Running on CPU")
+
+    return device
 
 if __name__ == "__main__":
     app.serve()

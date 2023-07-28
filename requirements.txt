@@ -4,3 +4,4 @@ soundfile
 librosa
 boto3
 torchaudio
+accelerate
