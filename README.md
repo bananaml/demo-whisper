@@ -12,9 +12,9 @@ Rather than accepting files in requests, it uses AWS S3 to read stored audio fil
 
 ## Deploying on Banana.dev
 
-1. Fork this repository to your own Github account.
+1. [Fork this](https://github.com/bananaml/demo-whisper/fork) repository to your own Github account.
 2. Connect your Github account on Banana.
-3. Create a new model on Banana from the forked Github repository.
+3. [Create a new model](https://app.banana.dev/deploy) on Banana from the forked Github repository.
 
 ## Running after deploying
 
